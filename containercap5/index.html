@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperMarket+ — Tu súper de confianza</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body{background-color:#0f172a;color:#e5e7eb}
+    .bg-panel{background-color:#111827}
+    .text-dim{color:#cbd5e1}
+    .brand-badge{width:38px;height:38px;border-radius:.6rem;display:grid;place-items:center;font-weight:900;background:conic-gradient(from 180deg,#22c55e,#10b981,#34d399,#22c55e);color:#06140d}
+    .hero-bg{background:radial-gradient(1200px 600px at 80% -10%, rgba(16,185,129,.15), transparent 60%),radial-gradient(900px 500px at -10% 10%, rgba(251,191,36,.12), transparent 60%),#0f172a}
+    .card-dark{background:linear-gradient(180deg, rgba(255,255,255,.02), transparent), #0b1229;border:1px solid rgba(255,255,255,.08)}
+    .badge-deal{background:rgba(251,191,36,.12);color:#fde68a;border:1px dashed rgba(251,191,36,.4)}
+    .form-dark{background:#0a0f1f;color:#e5e7eb;border:1px solid rgba(255,255,255,.15)}
+    .link-light-quiet{color:#e5e7eb;text-decoration:none;opacity:.9}
+    .link-light-quiet:hover{opacity:1;color:#fbbf24}
+    footer{border-top:1px solid rgba(255,255,255,.08)}
+  </style>
+</head>
+<body class="hero-bg">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top bg-panel border-bottom border-dark py-2" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <span class="brand-badge">S+</span>
+        <strong>SuperMarket<span class="text-success">+</span></strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <form class="ms-lg-3 my-2 my-lg-0 flex-grow-1" role="search">
+          <div class="input-group">
+            <span class="input-group-text bg-panel text-dim">🔎</span>
+            <input id="search" class="form-control form-dark" type="search" placeholder="Buscar frutas, lácteos, limpieza…" aria-label="Buscar">
+          </div>
+        </form>
+        <ul class="navbar-nav ms-lg-3 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ofertas">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#destacados">Destacados</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a class="btn btn-outline-light" href="#login">Entrar</a>
+          </li>
+          <li class="nav-item ms-2 mt-2 mt-lg-0 position-relative">
+            <a class="btn btn-success fw-bold" href="#carrito">🛒 Carrito</a>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark border border-dark" id="cartCount">0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-5 fw-bold">Ahorras más con <span class="text-success">MegaOfertas</span> de la semana</h1>
+          <p class="lead text-dim">Productos frescos, envíos rápidos y precios bajos todos los días. Compra en línea y recoge en tienda o recibe en casa.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <button id="btnExplorar" class="btn btn-success btn-lg fw-semibold">🛍️ Explorar productos</button>
+            <a class="btn btn-outline-light btn-lg" href="#ofertas">🔥 Ver ofertas de hoy</a>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            <span class="badge badge-deal rounded-pill px-3 py-2">🍎 3x2 en Frutas</span>
+            <span class="badge badge-deal rounded-pill px-3 py-2">🥛 -20% en Lácteos</span>
+            <span class="badge badge-deal rounded-pill px-3 py-2">🧼 Envío gratis $799+</span>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card card-dark border-0 rounded-4 p-4 text-center">
+            <div class="display-1">🧺</div>
+            <p class="mb-0 text-dim">Selecciona tus básicos y nosotros los llevamos a tu puerta.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-warning d-flex align-items-center gap-3 mt-4 mb-0" role="alert">
+        <div class="fs-4">🎁</div>
+        <div>
+          <strong>Únete a Club Ahorro:</strong> acumula puntos y recibe cupones exclusivos cada semana.
+        </div>
+        <div class="ms-auto">
+          <button id="btnClub" class="btn btn-sm btn-dark border">Quiero unirme</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- CATEGORIES -->
+    <section id="categorias" class="py-4">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between mb-3">
+          <h2 class="h3 mb-0">Comprar por categorías</h2>
+        </div>
+        <div class="row g-3">
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="card card-dark text-center p-3 h-100 link-light-quiet" href="#frutas">
+              <div class="fs-2">🍌</div>
+              <strong>Frutas & Verduras</strong>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="card card-dark text-center p-3 h-100 link-light-quiet" href="#lacteos">
+              <div class="fs-2">🥛</div>
+              <strong>Lácteos</strong>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="card card-dark text-center p-3 h-100 link-light-quiet" href="#carnes">
+              <div class="fs-2">🥩</div>
+              <strong>Carnes</strong>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="card card-dark text-center p-3 h-100 link-light-quiet" href="#pan">
+              <div class="fs-2">🥖</div>
+              <strong>Panadería</strong>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="card card-dark text-center p-3 h-100 link-light-quiet" href="#limpieza">
+              <div class="fs-2">🧽</div>
+              <strong>Limpieza</strong>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="card card-dark text-center p-3 h-100 link-light-quiet" href="#bebidas">
+              <div class="fs-2">🥤</div>
+              <strong>Bebidas</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section id="destacados" class="py-4">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between mb-3">
+          <h2 class="h3 mb-0">Destacados de la semana</h2>
+        </div>
+        <div id="productGrid" class="row g-3">
+          <!-- JS render -->
+        </div>
+        <div id="ofertas" class="alert alert-warning mt-4" role="alert">
+          <div class="d-flex align-items-center gap-3">
+            <div class="fs-4">⚡</div>
+            <div>
+              <strong>Ofertas relámpago (hoy):</strong> agrega 3 artículos participantes y paga solo 2. Válido hasta las 23:59.
+            </div>
+            <div class="ms-auto">
+              <button id="btnVerTodo" class="btn btn-outline-dark">Ver todo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER / INFO -->
+    <section class="py-4">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-lg-8">
+            <div class="card card-dark p-4 h-100">
+              <h3>Recibe cupones por correo</h3>
+              <p class="text-dim mt-n2">Suscríbete al boletín y consigue hasta <strong>15% OFF</strong> en tu primera compra.</p>
+              <form id="newsletterForm" class="row g-2">
+                <div class="col-12 col-sm-8 col-md-9">
+                  <input id="email" type="email" class="form-control form-dark" placeholder="tu@correo.com" required>
+                </div>
+                <div class="col-12 col-sm-4 col-md-3 d-grid">
+                  <button type="submit" class="btn btn-success fw-semibold">Suscribirme</button>
+                </div>
+              </form>
+              <p id="nlMsg" class="mt-2 text-success d-none">¡Gracias! Revisa tu correo para confirmar 🎉</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card card-dark p-4 h-100">
+              <h3>Compra segura</h3>
+              <ul class="mb-0 text-dim">
+                <li>Pagos protegidos y facturación electrónica</li>
+                <li>Devoluciones fáciles en 7 días</li>
+                <li>Atención 24/7 por chat</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-4 mt-2 bg-panel">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="brand-badge">S+</span>
+            <strong>SuperMarket+</strong>
+          </div>
+          <p class="text-dim mb-0">Tu súper de confianza con productos frescos, envíos el mismo día y precios bajos todos los días.</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h5>Tienda</h5>
+          <ul class="list-unstyled">
+            <li><a class="link-light-quiet" href="#categorias">Categorías</a></li>
+            <li><a class="link-light-quiet" href="#destacados">Destacados</a></li>
+            <li><a class="link-light-quiet" href="#ofertas">Ofertas</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2">
+          <h5>Ayuda</h5>
+          <ul class="list-unstyled">
+            <li><a class="link-light-quiet" href="#">Envíos</a></li>
+            <li><a class="link-light-quiet" href="#">Devoluciones</a></li>
+            <li><a class="link-light-quiet" href="#">Soporte</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-2">
+          <h5>Legal</h5>
+          <ul class="list-unstyled">
+            <li><a class="link-light-quiet" href="#">Términos</a></li>
+            <li><a class="link-light-quiet" href="#">Privacidad</a></li>
+            <li><a class="link-light-quiet" href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-dim mt-3 mb-0">© <span id="year"></span> SuperMarket+. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Datos de ejemplo para productos
+    const products = [
+      { id:1, name:"Manzana Gala (1kg)", emoji:"🍎", price:39.9, old:49.9, tag:"3x2" },
+      { id:2, name:"Leche Entera 1L", emoji:"🥛", price:22.5, old:null, tag:"-15%" },
+      { id:3, name:"Pan Integral", emoji:"🍞", price:34.0, old:38.0, tag:"Nuevo" },
+      { id:4, name:"Pechuga de Pollo (kg)", emoji:"🍗", price:129.0, old:149.0, tag:"Ahorra" },
+      { id:5, name:"Detergente 1.2L", emoji:"🧴", price:56.9, old:64.9, tag:"Hogar" },
+      { id:6, name:"Yogur Natural 900g", emoji:"🥣", price:48.0, old:null, tag:"Fresco" },
+      { id:7, name:"Refresco 2L", emoji:"🥤", price:32.9, old:36.9, tag:"Promo" },
+      { id:8, name:"Cereal 500g", emoji:"🥣", price:44.9, old:52.9, tag:"-10%" }
+    ];
+
+    const grid = document.getElementById('productGrid');
+    const cartCount = document.getElementById('cartCount');
+
+    function money(n){ return n.toLocaleString('es-MX', {style:'currency', currency:'MXN'}); }
+
+    function makeCard(p){
+      const col = document.createElement('div');
+      col.className = 'col-12 col-sm-6 col-lg-3';
+      col.innerHTML = `
+        <article class="card card-dark h-100">
+          <div class="ratio ratio-4x3 d-grid place-items-center fs-1">${p.emoji}</div>
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title mb-1">${p.name}</h6>
+            <div class="d-flex justify-content-between small mb-2">
+              <span class="fw-bold">${money(p.price)}</span>
+              <span>${p.old ? `<s class='text-dim'>${money(p.old)}</s>` : ''}</span>
+            </div>
+            <span class="badge text-bg-dark border">${p.tag}</span>
+            <div class="mt-auto d-grid gap-2 mt-3">
+              <button class="btn btn-success" data-id="${p.id}">Agregar</button>
+              <button class="btn btn-outline-light">Detalles</button>
+            </div>
+          </div>
+        </article>`;
+
+      col.querySelector('button[data-id]')?.addEventListener('click', () => {
+        const n = Number(cartCount.textContent || '0') + 1; cartCount.textContent = n;
+        cartCount.animate([
+          { transform:'scale(1)' },
+          { transform:'scale(1.25)' },
+          { transform:'scale(1)' }
+        ], { duration:300, easing:'ease-out' });
+      });
+      return col;
+    }
+
+    products.forEach(p => grid.appendChild(makeCard(p)));
+
+    document.getElementById('btnExplorar')?.addEventListener('click', () => {
+      document.getElementById('destacados')?.scrollIntoView({behavior:'smooth'});
+    });
+    document.getElementById('btnVerTodo')?.addEventListener('click', () => {
+      document.getElementById('destacados')?.scrollIntoView({behavior:'smooth'});
+    });
+    document.getElementById('btnClub')?.addEventListener('click', () => alert('¡Gracias por unirte a Club Ahorro!'));
+
+    document.getElementById('newsletterForm')?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      if(!email) return;
+      document.getElementById('nlMsg').classList.remove('d-none');
+      e.target.reset();
+    });
+
+    document.getElementById('search')?.addEventListener('keydown', (e)=>{
+      if(e.key==='Enter'){
+        e.preventDefault();
+        alert('Resultados para: ' + e.target.value);
+      }
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
