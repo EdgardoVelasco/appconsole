@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\egar2\\Desktop\\appconsole\\capitulo10\\ProducerServiceBus\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{651C843E-CE0F-499B-B0E7-DBF2A35FAAA9}|ProducerServiceBus\\ProducerServiceBus.csproj|c:\\users\\egar2\\desktop\\appconsole\\capitulo10\\producerservicebus\\producerservicebus\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{651C843E-CE0F-499B-B0E7-DBF2A35FAAA9}|ProducerServiceBus\\ProducerServiceBus.csproj|solutionrelative:producerservicebus\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\egar2\\Desktop\\appconsole\\capitulo10\\ProducerServiceBus\\ProducerServiceBus\\Program.cs",
+              "RelativeDocumentMoniker": "ProducerServiceBus\\Program.cs",
+              "ToolTip": "C:\\Users\\egar2\\Desktop\\appconsole\\capitulo10\\ProducerServiceBus\\ProducerServiceBus\\Program.cs",
+              "RelativeToolTip": "ProducerServiceBus\\Program.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAcwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T23:14:06.724Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

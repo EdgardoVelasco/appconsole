@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\egar2\\Desktop\\appconsole\\capitulo10\\QueueApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{02DC9A99-A00E-4418-BCE7-3137B455B549}|QueueApp\\QueueApp.csproj|c:\\users\\egar2\\desktop\\appconsole\\capitulo10\\queueapp\\queueapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02DC9A99-A00E-4418-BCE7-3137B455B549}|QueueApp\\QueueApp.csproj|solutionrelative:queueapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\egar2\\Desktop\\appconsole\\capitulo10\\QueueApp\\QueueApp\\Program.cs",
+              "RelativeDocumentMoniker": "QueueApp\\Program.cs",
+              "ToolTip": "C:\\Users\\egar2\\Desktop\\appconsole\\capitulo10\\QueueApp\\QueueApp\\Program.cs",
+              "RelativeToolTip": "QueueApp\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T00:54:32.921Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
